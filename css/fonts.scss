@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Pilat Bold';
+    src: url('fonts/pilat/PilatExtended-Bold.eot');
+    src: local('Pilat Extended Bold'), local('PilatExtended-Bold'),
+        url('fonts/pilat/PilatExtended-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/pilat/PilatExtended-Bold.woff2') format('woff2'),
+        url('fonts/pilat/PilatExtended-Bold.woff') format('woff'),
+        url('fonts/pilat/PilatExtended-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Pilat Regular';
+    src: url('fonts/pilat/PilatExtended-Regular.eot');
+    src: local('Pilat Extended Regular'), local('PilatExtended-Regular'),
+        url('fonts/pilat/PilatExtended-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/pilat/PilatExtended-Regular.woff2') format('woff2'),
+        url('fonts/pilat/PilatExtended-Regular.woff') format('woff'),
+        url('fonts/pilat/PilatExtended-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Thin';
+    src: url('fonts/pilat/PilatExtended-Thin.eot');
+    src: local('Pilat Extended Thin'), local('PilatExtended-Thin'),
+        url('fonts/pilat/PilatExtended-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/pilat/PilatExtended-Thin.woff2') format('woff2'),
+        url('fonts/pilat/PilatExtended-Thin.woff') format('woff'),
+        url('fonts/pilat/PilatExtended-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Heavy';
+    src: url('fonts/pilat/PilatExtended-Heavy.eot');
+    src: local('Pilat Extended Heavy'), local('PilatExtended-Heavy'),
+        url('fonts/pilat/PilatExtended-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('fonts/pilat/PilatExtended-Heavy.woff2') format('woff2'),
+        url('fonts/pilat/PilatExtended-Heavy.woff') format('woff'),
+        url('fonts/pilat/PilatExtended-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Light';
+    src: url('fonts/pilat/PilatExtended-Light.eot');
+    src: local('Pilat Extended Light'), local('PilatExtended-Light'),
+        url('fonts/pilat/PilatExtended-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/pilat/PilatExtended-Light.woff2') format('woff2'),
+        url('fonts/pilat/PilatExtended-Light.woff') format('woff'),
+        url('fonts/pilat/PilatExtended-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-Bold.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-Bold.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-Black.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-Black.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-BlackItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-BlackItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro.woff') format('woff'),
+        url('fonts/sofia/SofiaPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-LightItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-LightItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-SemiBoldItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-SemiBoldItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-SemiBold.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-SemiBold.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-UltraLight.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-UltraLight.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-MediumItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-MediumItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-ExtraLightItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-ExtraLightItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-Light.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-Light.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-ExtraLight.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-ExtraLight.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-Italic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-Italic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro Medium';
+    src: url('fonts/sofia/SofiaPro-Medium.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-Medium.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-BoldItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-BoldItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/sofia/SofiaPro-UltraLightItalic.woff2') format('woff2'),
+        url('fonts/sofia/SofiaPro-UltraLightItalic.woff') format('woff'),
+        url('fonts/sofia/SofiaPro-UltraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
