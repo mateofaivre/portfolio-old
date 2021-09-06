@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/projets.css">
     <link rel="stylesheet" href="components/styles/menu.css">
     <link rel="stylesheet" href="components/styles/box-loading.css">
+    <link rel="stylesheet" href="components/styles/swiper-bundle.css">
+    <link rel="stylesheet" href="components/styles/swiper.css">
 </head>
 <body>
   <div class="cursor"></div>
@@ -30,244 +32,100 @@
 <?php include 'components/menu.php' ?>
 <?php include 'components/box-loading.php' ?>
 
+<?php $slides = [
+  [
+    "type-projet" => "Stage",
+    "date-projet" => "Mai - Août 2021",
+    "title" => "Fcinq",
+    "subtitle" => "J'ai rejoint l'agence digitale parisienne <a href='https://www.fcinq.com/' target='_blank' class='link--normal'>FCINQ</a> en tant que développeur web. J’ai pu participer à des projets importants pour l’Institut National du Cancer, la marque Comté, le festival Series Mania, l’agence Australie.Gad... J’ai expérimenté WordPress (avec des thèmes créés par FCINQ), SCSS, PHP, Twig, JS et Nuxt.Js. Découvrez <a href='https://issuu.com/mateofaivre/docs/rapport-stage-mateo-faivre' class='link--normal' target='_blank'>mon rapport de stage.</a>",
+    'savoir-plus' => false,
+    "img-right" => "mokup-fcinq.png",
+    "overlay" => false,
+    "overlay-slider" => false,
+  ],
+  [
+    "type-projet" => "Workshop",
+    "date-projet" => "Janvier 2021 - Aujourd'hui",
+    "title" => "Emargement",
+    "subtitle" => "J’ai codé un site permettant de gérer les présences des
+    étudiants de l'ESADD avec <i>HTML/CSS</i>, <i>JS</i>, <i>PHP</i> et <i>SQL</i>, avec un back-office. À découvrir bientôt...",
+    "savoir-plus" => false,
+    "img-right" => "mokup-esadd-v2.png",
+    "overlay" => false
+  ],
+  [
+    "type-projet" => "Workshop",
+    "date-projet" => "Avril 2021",
+    "title" => "Mercedes",
+    "subtitle" => "Pour le groupe CHOPARD et MERCEDES-TRUCKS, j’ai designé puis codé en 5 jours un site <i>responsive</i> permettant de découvrir la possibilité de faire un covering sur le camion Mercedes Actros, avec une expérience 3D. Pour cela, j'ai utilisé <i>HTML/SCSS</i>, <i>JS</i> et une librairie (Model Viewer) pour intégrer un modèle 3D du camion, réalisé par un camarade. Vous pouvez le découvrir <a href='/covering' class='link--normal' target='_blank'>ici.</a>",
+    "savoir-plus" => false,
+    "img-right" => "mockup-actros.png",
+    "overlay" => false,
+  ],
+  [
+    "type-projet" => "Les Entrep'",
+    "date-projet" => "Novembre - Mai 2021",
+    "title" => "Sneaky World",
+    "subtitle" => "Je participe à un projet de
+    création d’une boutique physique et en ligne de vente de sneakers rares à Dijon dans le cadre du programme Les Entrep’. Je suis épaulé par 5 camarades dont 4 provenant d’école de commerce.",
+    "savoir-plus" => true,
+    "img-right" => "mockup-sneaky.png",
+    "overlay" => true,
+    "overlay-slider" => false,
+    "overlay-media-type" => 'video',
+    "overlay-media-name" => 'sneakyworld-reduit.mp4',
+    "overlay-text" => "Dans le cadre des Entrep’, je suis épaulé par 5 camarades dont 4 provenant d’école de commerce. Bien que je développe un site e-commerce sur Shopify pour ce projet, je suis aussi amené à développer mon sens de l’entreprenariat, du marketing, du commerce mais aussi économique. Durant cette expérience nous réalisons aussi avec un camarade de l'ESADD l'idendité graphique et les supports de communication autour du projet comme cette vidéo promotionnelle.",
+  ],
+  [
+    "type-projet" => "Workshop",
+    "date-projet" => "Octobre - Décembre 2020",
+    "title" => "123DATA",
+    "subtitle" => "J’ai designé et codé l’audioguide de l’exposition 123DATA organisée par EDF et l’ESADD. L’audioguide est disponible via un site <i>HTML/CSS/JS</i> mais aussi une application <i>Android</i>.",
+    "savoir-plus" => true,
+    "img-right" => "mockup-123data.png",
+    "overlay" => true,
+    "overlay-slider" => false,
+    "overlay-media-type" => 'video',
+    "overlay-media-name" => 'mokup-123data-big-sound.mp4',
+    "overlay-text" => "L'exposition nationale 123DATA est basée sur l'idée de faire découvrir le <i>Data Design</i> à tous. Il fallait rompre avec certains des a priori persistants touchant à la valeur et utilité des données. L'ESADD est partie prenante de l'édition dijonnaise. J'ai réalisé un audioguide (uniquement pour téléphone) en <i>HTML/CSS</i> et <i>JS</i> ainsi qu'une application <i>Android</i>. Il est disponible <a href='/audioguide' target='_blank'>ici.</a>",
+  ],
+  [
+    "type-projet" => "Workshop",
+    "date-projet" => "Décembre 2020",
+    "title" => "DS",
+    "subtitle" => "Pour le groupe CHOPARD, j’ai participé avec deux camarades à la réalisation d’une vidéo en <i>Motion Design</i> concernant DS AUTOMOBILES et le nouveau moteur électrique de DS3 Crossback.",
+    "savoir-plus" => true,
+    "img-right" => "mockup-ds.png",
+    "overlay" => true,
+    "overlay-slider" => false,
+    "overlay-media-type" => 'video',
+    "overlay-media-name" => 'DS3_FINAL_cut.mp4',
+    'overlay-video-poster' => "poster-cv-video.png",
+    "overlay-text" => "Ce workshop m'a été confié par le groupe CHOPARD pour DS Automobiles pendant 7 jours en décembre 2020. À travers du <i>Motion Design</i> il fallait montrer la transition énergétique du moteur à essence vers le moteur électrique autour du modèle DS3 Crossback. Ce projet m'a permis de développer ma créatvité et mon expérience sur <i>After Effects</i>, mais surtout de découvrir une grande marque. La gestion de projet a été un point clé de la réussite de cette réalisation.",
+  ],
+  [
+    "type-projet" => "Stage",
+    "date-projet" => "Mars - Juillet 2020",
+    "title" => "FEDOSAD",
+    "subtitle" => "J’ai effectué deux missions. La première était la création d’une partie Devis réalisée en <i> HTML/CS/JS </i> sur le site <i>WordPress</i>. La deuxième était de créer un Extranet pour les 700 employés, toujours sur le site.",
+    "savoir-plus" => true,
+    "img-right" => "mockup-fedo.png",
+    "overlay" => true,
+    "overlay-slider" => true,
+    "overlay-media-type" => ['video', 'video'],
+    "overlay-media-name" => ['Devis_portfolio-crop.mp4', 'Extranet_portfolio-crop.mp4'],
+    "overlay-text" => [
+      "Durant le mois de mars jusqu’à mai 2020, j’ai effectué une mission pour la FEDOSAD à Dijon, une entreprise d’aide à la personne. Je me suis chargé de la création d’une partie Devis en <i>HTML/CSS/JS</i> sur leur <i>WordPress</i>. Cette partie doit permettre de mieux cibler le client, puisque elle permet de connaître son profil et ses coordonnées. Le client a lui une information à la fin du devis lui permettant de voir quels services de la FEDOSAD pourraient lui convenir.",
+      "La collaboration avec la FEDOSAD s’étant bien déroulée, j’ai effectué un stage de juin à juillet 2020 autour d’une mission bien précise. Il m’a fallu créer un Extranet pour les 700 employés, qui leur permettrait d’accéder, en fonction de leur poste au sein de l’entreprise, à des documents spécifiques téléchargeables. Ceci a encore été effectué sur le site <i>WordPress</i> avec du <i>HTML/CSS</i>, du <i>JavaScript</i>, ainsi que du <i>PHP</i>."
+    ],
+  ]
+] ?>
+
     <div class="slider__wrapper">
-      <div class="flex__container -light flex--active" data-slide="1">
-            <div class="flex__item -left">
-              <div class="flex__content">
-                <div class="text--sub">STAGE</div>
-                <div class="date-projet">Mai - Août 2021</div>
-                <h1 class="text--big">FCINQ</h1>
-                <p class="text--normal">J'ai rejoint l'agence digitale parisienne <a href="https://www.fcinq.com/" target="_blank" class="link--normal">FCINQ</a> en tant que développeur web. J’ai pu participer à des projets importants pour l’Institut National du Cancer, la marque Comté, le festival Series Mania, l’agence Australie.Gad... J’ai expérimenté WordPress (avec des thèmes créés par FCINQ), SCSS, PHP, Twig, JS et Nuxt.Js. Découvrez <a href="https://issuu.com/mateofaivre/docs/rapport-stage-mateo-faivre" class="link--normal" target="_blank">mon rapport de stage.</a></p>
-              </div>
-              <p class="text__background">FCINQ</p>
-            </div>
-            <div class="overlayy">
-              <i class="fal fa-times"></i>
-                <input type="radio" id="s-51" class="slider-control" name="slider-control" checked="checked">
-                <input type="radio" id="s-52" class="slider-control" name="slider-control">
-                <!-- <input type="radio" id="s-3" name="slider-control"> -->
-                <div class="js-slider">
-                  <figure class="js-slider_item img-1">
-                      <div class="js-slider_img">
-                      <!-- <img class="c-img-w-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_3.jpg" alt=""> -->
-                        <video controls src="css/video/Devis_portfolio-crop.mp4"   preload="auto" alt="Fullscreen"></video>
-                      </div>
-                      <figcaption class="wo-caption">
-                        <ul class="wo-credit">
-                          <!-- <li>Stage</li>
-                          <li>Mars - Juillet 2020</li> -->  
-                        </ul>
-                      </figcaption>
-                  </figure>
-                  <figure class="js-slider_item img-2">
-                      <div class="js-slider_img">
-                          <video controls src="css/video/Extranet_portfolio-crop.mp4"   preload="auto" alt="Fullscreen"></video>
-                      </div>
-                      <figcaption class="wo-caption">
-                      <ul class="wo-credit">
-                        </ul>
-                      </figcaption>
-                  </figure>
-                
-                  <div class="js-slider_nav">
-                      <label class="js-slider_nav_item s-nav-1 prev" for="s-52"><i class="far fa-chevron-left"></i></label>
-                      <label class="js-slider_nav_item s-nav-1 next" for="s-52"><i class="far fa-chevron-right"></i></label>
-                      <label class="js-slider_nav_item s-nav-2 prev" for="s-51"><i class="far fa-chevron-left"></i></label>
-                      <label class="js-slider_nav_item s-nav-2 next" for="s-51"><i class="far fa-chevron-right"></i></label>
-                  </div>
-                
-                  </div>
-                </div>
-            <div class="flex__item -right"><img class="pokemon__img" src="css/img/mokup-fcinq.png"/></div>  
-          
-        </div>
-        <div class="flex__container -dark animate--start" data-slide="2">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">WORKSHOP</p>
-              <div class="date-projet">Janvier - Aujourd'hui</div>
-              <h1 class="text--big">EMARGEMENT</h1>
-              <p class="text--normal">J’ai codé un site permettant de gérer les présences des
-                étudiants de l'ESADD avec <i>HTML/CSS</i>, <i>JS</i>, <i>PHP</i> et <i>SQL</i>, avec un back-office. À découvrir bientôt...</p>
-                <!-- <div class="savoir-plus">En savoir plus</div> -->
-            </div>
-            <p class="text__background">EMARGEMENT</p>
-          </div>
-          <div class="overlayy">
-          </div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mokup-esadd-v2.png"/></div>
-        </div>
-
-        <div class="flex__container -dark animate--start" data-slide="3">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">WORKSHOP</p>
-              <div class="date-projet">Avril 2021</div>
-              <h1 class="text--big">MERCEDES</h1>
-              <p class="text--normal">Pour le groupe CHOPARD et MERCEDES-TRUCKS, j’ai designé puis codé en 5 jours un site <i>responsive</i> permettant de découvrir la possibilité de faire un covering sur le camion Mercedes Actros, avec une expérience 3D. Pour cela, j'ai utilisé <i>HTML/SCSS</i>, <i>JS</i> et une librairie (Model Viewer) pour intégrer un modèle 3D du camion, réalisé par un camarade. Vous pouvez le découvrir <a href="/covering" class="link--normal" target="_blank">ici.</a></p>
-              <!-- <a class="savoir-plus">En savoir plus</a> -->
-            </div>
-            
-            <p class="text__background">MERCEDES</p>
-          </div>
-          <div class="overlayy"></div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mockup-actros.png"/></div>  
-        </div>
-
-        <div class="flex__container -light animate--start" data-slide="4">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">LES ENTREP'</p>
-              <div class="date-projet">Novembre - Mai 2021</div>
-              <h1 class="text--big">SNEAKY WORLD</h1>
-              <p class="text--normal">Je participe à un projet de
-                création d’une boutique physique et en ligne de vente de sneakers rares à Dijon dans le cadre du programme Les Entrep’. Je suis épaulé par 5 camarades dont 4 provenant d’école de commerce.</p>
-                <a class="savoir-plus">En savoir plus</a>
-            </div>
-            <p class="text__background">SNEAKY</p>
-          </div>
-          <div class="overlayy">
-            <i class="fal fa-times"></i>
-                <input type="radio" id="s-41" class="slider-control" name="slider-control4" checked="checked">
-              <div class="js-slider">
-                <figure class="js-slider_item img-1">
-                    <div class="js-slider_img">
-                      <video controls src="css/video/sneakyworld-reduit.mp4"   preload="auto" alt="Fullscreen"></video>
-                    </div>
-                    <figcaption class="wo-caption">
-                      <ul class="wo-credit">
-                        <li>Dans le cadre des Entrep’, je suis épaulé par 5 camarades dont 4 provenant d’école de commerce. Bien que je développe un site e-commerce sur Shopify pour ce projet, je suis aussi amené à développer mon sens de l’entreprenariat, du marketing, du commerce mais aussi économique. Durant cette expérience nous réalisons aussi avec un camarade de l'ESADD l'idendité graphique et les supports de communication autour du projet comme cette vidéo promotionnelle. </li>
-                      </ul>
-                    </figcaption>
-                </figure>
-               
-                </div>
-              </div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mockup-sneaky.png"/></div>
-        </div>
-
-        <div class="flex__container -dark animate--start" data-slide="5">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">WORKSHOP</p>
-              <div class="date-projet">Octobre - Décembre 2020</div>
-              <h1 class="text--big">123DATA</h1>
-              <p class="text--normal">J’ai designé et codé l’audioguide de l’exposition 123DATA organisée par EDF et l’ESADD. L’audioguide est disponible via un site <i>HTML/CSS/JS</i> mais aussi une application <i>Android</i>.</p>
-              <a class="savoir-plus">En savoir plus</a>
-            </div>
-            <p class="text__background">123DATA</p>
-          </div>
-            <div class="overlayy">
-              <i class="fal fa-times"></i>
-                  <input type="radio" id="s-31" class="slider-control" name="slider-control3" checked="checked">
-                <div class="js-slider">
-                  <figure class="js-slider_item img-1">
-                      <div class="js-slider_img">
-                        <video controls src="css/video/mokup-123data-big-sound.mp4"   preload="auto" alt="Fullscreen"></video>
-                      </div>
-                      <figcaption class="wo-caption">
-                        <ul class="wo-credit">
-                          <li>L'exposition nationale 123DATA est basée sur l'idée de faire découvrir le <i>Data Design</i> à tous. Il fallait rompre avec certains des a priori persistants touchant à la valeur et utilité des données. L'ESADD est partie prenante de l'édition dijonnaise. J'ai réalisé un audioguide (uniquement pour téléphone) en <i>HTML/CSS</i> et <i>JS</i> ainsi qu'une application <i>Android</i>. Il est disponible <a href="/audioguide" target="_blank">ici.</a></li>
-                        </ul>
-                      </figcaption>
-                  </figure>
-                 
-                  </div>
-                </div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mockup-123data.png"/></div>
-        </div>
-
-        <div class="flex__container -light animate--start" data-slide="6">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">WORKSHOP</p>
-              <div class="date-projet">Décembre 2020</div>
-              <h1 class="text--big">DS</h1>
-              <p class="text--normal">Pour le groupe CHOPARD, j’ai participé avec deux camarades à la réalisation d’une vidéo en <i>Motion Design</i> concernant DS AUTOMOBILES et le nouveau moteur électrique de DS3 Crossback.</p>
-              <a class="savoir-plus">En savoir plus</a>
-            </div>
-            <p class="text__background">CHOPARD</p>
-          </div>
-          <div class="overlayy">
-            <i class="fal fa-times"></i>
-              <input type="radio" id="s-11" class="slider-control" name="slider-control2" checked="checked">
-              <input type="radio" id="s-12" class="slider-control" name="slider-control2">
-              <div class="js-slider">
-                <figure class="js-slider_item img-1">
-                    <div class="js-slider_img">
-                    <!-- <img class="c-img-w-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_3.jpg" alt=""> -->
-                      <video controls poster="css/img/poster-ds.png" src="css/video/DS3_FINAL_cut.mp4"  alt="Fullscreen"></video>
-                    </div>
-                    <figcaption class="wo-caption">
-                      <ul class="wo-credit">
-                        <!-- <li>Stage</li>
-                        <li>Mars - Juillet 2020</li> -->    
-                        <li>Ce workshop m'a été confié par le groupe CHOPARD pour DS Automobiles pendant 7 jours en décembre 2020. À travers du <i>Motion Design</i> il fallait montrer la transition énergétique du moteur à essence vers le moteur électrique autour du modèle DS3 Crossback. Ce projet m'a permis de développer ma créatvité et mon expérience sur <i>After Effects</i>, mais surtout de découvrir une grande marque. La gestion de projet a été un point clé de la réussite de cette réalisation.
-                        </li>
-                      </ul>
-                    </figcaption>
-                </figure>
-
-                </div>
-              </div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mockup-ds.png"/></div>
-        </div>
-
-        <div class="flex__container -dark animate--start" data-slide="7">
-          <div class="flex__item -left">
-            <div class="flex__content">
-              <p class="text--sub">STAGE</p>
-              <div class="date-projet">Mars - Juillet 2020</div>
-              <h1 class="text--big">FEDOSAD</h1>
-              <p class="text--normal">J’ai effectué deux missions. La première était la création d’une partie Devis réalisée en <i> HTML/CS/JS </i> sur le site <i>WordPress</i>. La deuxième était de créer un Extranet pour les 700 employés, toujours sur le site.</p>
-              <a class="savoir-plus">En savoir plus</a>
-            </div>
-            
-            <p class="text__background">FEDOSAD</p>
-          </div>
-          <div class="overlayy">
-            <i class="fal fa-times"></i>
-              <input type="radio" id="s-01" class="slider-control" name="slider-control" checked="checked">
-              <input type="radio" id="s-02" class="slider-control" name="slider-control">
-              <!-- <input type="radio" id="s-3" name="slider-control"> -->
-              <div class="js-slider">
-                <figure class="js-slider_item img-1">
-                    <div class="js-slider_img">
-                    <!-- <img class="c-img-w-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_3.jpg" alt=""> -->
-                      <video controls src="css/video/Devis_portfolio-crop.mp4"   preload="auto" alt="Fullscreen"></video>
-                    </div>
-                    <figcaption class="wo-caption">
-                      <ul class="wo-credit">
-                        <!-- <li>Stage</li>
-                        <li>Mars - Juillet 2020</li> -->  
-                        <li>Durant le mois de mars jusqu’à mai 2020, j’ai effectué une mission pour la FEDOSAD à Dijon, une entreprise d’aide à la personne. Je me suis chargé de la création d’une partie Devis en <i>HTML/CSS/JS</i> sur leur <i>WordPress</i>. Cette partie doit permettre de mieux cibler le client, puisque elle permet de connaître son profil et ses coordonnées. Le client a lui une information à la fin du devis lui permettant de voir quels services de la FEDOSAD pourraient lui convenir.</li>
-                      </ul>
-                    </figcaption>
-                </figure>
-                <figure class="js-slider_item img-2">
-                    <div class="js-slider_img">
-                        <video controls src="css/video/Extranet_portfolio-crop.mp4"   preload="auto" alt="Fullscreen"></video>
-                    </div>
-                    <figcaption class="wo-caption">
-                    <ul class="wo-credit">
-                      <li>La collaboration avec la FEDOSAD s’étant bien déroulée, j’ai effectué un stage de juin à juillet 2020 autour d’une mission bien précise. Il m’a fallu créer un Extranet pour les 700 employés, qui leur permettrait d’accéder, en fonction de leur poste au sein de l’entreprise, à des documents spécifiques téléchargeables. Ceci a encore été effectué sur le site <i>WordPress</i> avec du <i>HTML/CSS</i>, du <i>JavaScript</i>, ainsi que du <i>PHP</i>.</li>
-                      </ul>
-                    </figcaption>
-                </figure>
-               
-                <div class="js-slider_nav">
-                    <label class="js-slider_nav_item s-nav-1 prev" for="s-02"><i class="far fa-chevron-left"></i></label>
-                    <label class="js-slider_nav_item s-nav-1 next" for="s-02"><i class="far fa-chevron-right"></i></label>
-                    <label class="js-slider_nav_item s-nav-2 prev" for="s-01"><i class="far fa-chevron-left"></i></label>
-                    <label class="js-slider_nav_item s-nav-2 next" for="s-01"><i class="far fa-chevron-right"></i></label>
-                </div>
-              
-                </div>
-              </div>
-          <div class="flex__item -right"><img class="pokemon__img" src="css/img/mockup-fedo.png"/></div>  
-        </div>
-        
-      </div>
+      <?php foreach ($slides as $key => $slide) {
+        include 'components/slide.php';
+      } ?>
+    </div>
 
       <div class='icon-scroll'></div>
 
@@ -298,5 +156,7 @@
       <script src="components/js/cursor.js"></script>
       <script src="components/js/menu.js"></script>
       <script src="components/js/box-loading.js"></script>
+      <script src="components/js/swiper-bundle.min.js"></script>
+      <script src="components/js/swiper.js"></script>
 </body>
 </html>

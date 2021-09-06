@@ -36,7 +36,7 @@ window.addEventListener('wheel', function(e){
   e.preventDefault();
 
   for (let index = 0; index < overlay.length; index++) {
-    if (overlay[index].style.display == 'block') {
+    if (overlay[index].style.display == 'flex') {
       return;
     }
   }
@@ -65,7 +65,7 @@ window.addEventListener('wheel', function(e){
 
 window.addEventListener('keydown', (e) => {
  
-  if (e.defaultPrevented) {
+  if (e.defaultPrevented || body.classList.contains('-show-overlay')) {
     return;
   }
 
@@ -92,7 +92,6 @@ window.addEventListener('keydown', (e) => {
 });
 
 function changeStep(next) {
-  console.log(next)
   if (next < allSlideNav.length && next > 1){
     arrows.forEach( arrow => {
       arrow.classList.remove('disabled')
@@ -142,7 +141,7 @@ function changeNavState() {
   var current = $('.flex--active').data('slide')
   if (!body.classList.contains('-show-overlay')) {
     body.classList.add('-show-overlay')
-    overlay[current-1].style.display="block"
+    overlay[current-1].style.display="flex"
   }
   else {
     body.classList.remove('-show-overlay')
